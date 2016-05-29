@@ -1,0 +1,178 @@
+.chat-box {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  background: $lighter-grey;
+
+  overflow: hidden;
+
+  @include col-xs-24;
+  @include col-sm-24;
+  @include col-md-14;
+  @include col-lg-16;
+
+  @include mq-md {
+    overflow: visible;
+  }
+
+  @include mq-lg {
+    overflow: visible;
+  }
+}
+
+.chat-box__header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  min-height: 82px;
+  
+  background: $indigo;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.chat-box__header-title {
+  padding-left: 4.166667%;
+
+  color: $white;
+  font-size: $font-medium;
+}
+
+.chat-box__header-menu {
+  padding-top: 3px;
+  padding-right: 4.166667%;
+
+  @include mq-md {
+    display: none;
+  }
+
+  @include mq-lg {
+    display: none;
+  }
+}
+
+.chat-box__messages {
+  position: relative;
+  
+  display: flex;
+  flex-wrap: wrap;
+
+  overflow-y: auto;
+}
+
+
+.chat-box__message-wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  @include col-xs-22;
+  @include col-xs-offset-1;
+}
+
+.chat-box__message-wrapper:last-of-type {
+ padding-bottom: 100px;
+}
+
+.chat-box__message {
+  position: relative;
+  display: inline-block;
+  margin: 15px 0;
+
+  padding: 0 15px;
+  max-width: 66.66666667%;
+
+  font-size: $font-big;
+  white-space: pre-wrap;
+}
+
+.my-message {
+  align-self: flex-end;
+
+  background: #E0E0E0;
+}
+
+.guest-message {
+  align-self: flex-start;
+
+  color: white;
+
+  background: $indigo;
+}
+
+.chat-box__footer {
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  width: 100%;
+  height: 80px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  background:$lighter-grey;
+
+  @include mq-md {
+    width: $device-md - 530px;
+  }
+
+  @include mq-lg {
+    width: $device-lg - 520px;
+  }
+}
+
+.chat-box__message-text-wrapper {
+  height: 50px;
+
+  @include col-xs-13;
+  @include col-xs-offset-1;
+  @include col-sm-17;
+  @include col-sm-offset-1;
+  @include col-md-16;
+  @include col-md-offset-1;
+  @include col-lg-17;
+  @include col-lg-offset-1;
+}
+
+.chat-box__message-text {
+  width: 100%;
+  height: 50px;
+
+  text-indent: 25px;
+}
+
+.chat-box__button-send-wrapper {
+  display: flex;
+  justify-content: flex-end;
+
+  @include col-xs-8;
+  @include col-xs-offset-1;
+  @include col-sm-4;
+  @include col-sm-offset-1;
+  @include col-md-5;
+  @include col-md-offset-1;
+  @include col-lg-5;
+  @include col-lg-offset-0;
+}
+
+.chat-box__button-send {
+  min-width: 16.666667%;
+
+  @include mq-lg {
+  }
+}
+
+.chat-box__is-typing {
+  position: absolute;
+  top: -25%;
+
+  display: none;
+  width: 100%;
+
+  text-align: center;
+  color: $normal-grey;
+}

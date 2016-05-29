@@ -1,0 +1,111 @@
+.menu {
+  position: absolute;
+  top: 83px;
+  left: 100%;
+
+  width: 100%;
+
+  background: $white;
+
+  overflow: auto;
+
+  @include col-md-16;
+  @include col-md-offset-1;
+  @include col-lg-11;
+  @include col-lg-offset-1;
+
+  @include mq-xs {
+    height: 100%;
+  }
+
+  @include mq-sm {
+    height: 100%;
+  }
+
+  @include mq-md {
+    top: 0;
+  }
+
+  @include mq-lg {
+    top: 0;
+  }
+}
+
+.menu__header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 4.166667%;
+  min-height: 82px;
+
+  color: $white;
+  font-size: $font-medium;
+
+  background: $indigo;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+
+  @include col-xs-24;
+
+  @include mq-xs {
+    display: none;
+  }
+  
+  @include mq-sm {
+    display: none;
+  }
+}
+
+.menu-item {
+  padding: 1% 4%;
+
+  color: $black;
+  font-size: $font-medium;
+}
+
+.menu__key-field {
+  font-size: $font-small;
+}
+
+.menu-status--not-connected {
+  color: $red;
+}
+
+.menu-status--awaiting {
+  color: $yellow;
+}
+
+.menu-status--connected {
+  color: $green;
+}
+
+.menu__key-button {
+  margin: 4.166667% 0;
+
+  width: 100%;
+}
+
+.menu__connection__control-wrapper {
+  display: flex;
+  justify-content: space-between;
+  
+  @include col-xs-24;
+}
+
+.menu__connection__id-input {
+  margin: 4.166667% 0;
+  margin-top: 16px; //Fucking Firefox Fix
+  margin-bottom: 16px; //Fucking Firefox Fix
+
+  display: inline-block;
+
+  @include col-xs-12;
+}
+
+.menu__connection__button {
+  margin: 4.166667% 0;
+  margin-top: 16px; //Fucking Firefox Fix
+  margin-bottom: 16px; //Fucking Firefox Fix
+
+  width: 41.66666667%;
+}

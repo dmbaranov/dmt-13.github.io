@@ -1,0 +1,25 @@
+body {
+  background: $light-grey;
+}
+
+@include mq-xs {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+}
+
+@include mq-sm {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+}
